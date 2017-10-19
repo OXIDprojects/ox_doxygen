@@ -99,5 +99,3 @@ DEST=$OUTPUT"html/*"
 mv $DEST $OUTPUT
 
 rm $DOXCFG
-
-
