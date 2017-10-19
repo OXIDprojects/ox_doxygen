@@ -9,19 +9,18 @@ First we need to install Doxygen (http://doxygen.org) the tool which generates t
 ```
 	
     // Install needed packages to build doxygen
-    apt-get update
-	apt-get install flex bison make cmake graphviz build-essential
+    sudo apt-get update
+	sudo apt-get install flex bison make cmake graphviz build-essential
     
 	// Get the doxygen sources
     git clone https://github.com/doxygen/doxygen.git
 
 	// Build doxygen
-	cd doxygen
-	mkdir build
-	cd build
-	cmake -G "Unix Makefiles" ..
-	make
-	make install
+	mkdir doxygen/build
+	cd doxygen/build
+	sudo cmake -G "Unix Makefiles" ..
+	sudo make
+	sudo make install
 
 ```
 
@@ -30,11 +29,11 @@ After the installation you're ready to generate the source code documentaion.
 
 ## Generation of documentation ##
 
-To generate the documentation you need an installed OXID eShop 6 or bigger and two files, a configuration file and a bash file (./generateSourceCodeDocumenatation.sh).
+To generate the documentation you need an installed OXID eShop 6 or bigger and two files, a configuration file and a bash file (./generateSourceCodeDocumentation.sh).
  
 Configutation file: *doxy.conf.template*
 
-Bash file: *generateSourceCodeDocumenatation.sh*
+Bash file: *generateSourceCodeDocumentation.sh*
 
 Once you have stored them in the same folder you can **execute** the bash file.
 
@@ -58,21 +57,21 @@ Gererate source code documentation for OXID eShop CE
 
 ```
 	
-	./generateSourceCodeDocumenatation.sh -e CE -v 6.0.0 -o /var/www/oxideshop/sourcecodedocumentation/ce/ -i /var/www/oxideshop/vendor/oxid-esales/oxideshop-ce/
+	./generateSourceCodeDocumentation.sh -e CE -v 6.0.0 -o /var/www/oxideshop/sourcecodedocumentation/ce/ -i /var/www/oxideshop/vendor/oxid-esales/oxideshop-ce/
 ```
 
 Gererate source code documentation for OXID eShop PE
 
 ```
 	
-	./generateSourceCodeDocumenatation.sh -e PE -v 6.0.0 -o /var/www/oxideshop/sourcecodedocumentation/pe/ -i /var/www/oxideshop/vendor/oxid-esales/oxideshop-pe/
+	./generateSourceCodeDocumentation.sh -e PE -v 6.0.0 -o /var/www/oxideshop/sourcecodedocumentation/pe/ -i /var/www/oxideshop/vendor/oxid-esales/oxideshop-pe/
 ```
 
 Gererate source code documentation for OXID eShop EE
 
 ```
 	
-	./generateSourceCodeDocumenatation.sh -e EE -v 6.0.0 -o /var/www/oxideshop/sourcecodedocumentation/ee/ -i /var/www/oxideshop/vendor/oxid-esales/oxideshop-ee/
+	./generateSourceCodeDocumentation.sh -e EE -v 6.0.0 -o /var/www/oxideshop/sourcecodedocumentation/ee/ -i /var/www/oxideshop/vendor/oxid-esales/oxideshop-ee/
 ```
 
 
