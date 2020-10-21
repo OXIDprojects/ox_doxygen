@@ -31,11 +31,12 @@ After the installation you're ready to generate the source code documentaion.
 
 To generate the documentation you need an installed OXID eShop 6 or bigger and two files, a configuration file and a bash file (./generateSourceCodeDocumentation.sh).
  
-Configutation file: *doxy.conf.template*
+Configuration file: *doxy.conf.template*
 
 Bash file: *generateSourceCodeDocumentation.sh*
 
 Once you have stored them in the same folder you can **execute** the bash file.
+As it is safe to call *generateSourceCodeDocumentation.sh* from anywhere you could also set an alias a.e. while at the checkout location `alias generateSourceCodeDocumentation.sh="$PWD/generateSourceCodeDocumentation.sh"`.   
 
 ```
 	
@@ -53,21 +54,21 @@ Once you have stored them in the same folder you can **execute** the bash file.
 
 **Examples**
 
-Gererate source code documentation for OXID eShop CE
+Generate source code documentation for OXID eShop CE
 
 ```
 	
 	./generateSourceCodeDocumentation.sh -e CE -v 6.0.0 -o /var/www/oxideshop/sourcecodedocumentation/ce/ -i /var/www/oxideshop/vendor/oxid-esales/oxideshop-ce/
 ```
 
-Gererate source code documentation for OXID eShop PE
+Generate source code documentation for OXID eShop PE
 
 ```
 	
 	./generateSourceCodeDocumentation.sh -e PE -v 6.0.0 -o /var/www/oxideshop/sourcecodedocumentation/pe/ -i /var/www/oxideshop/vendor/oxid-esales/oxideshop-pe/
 ```
 
-Gererate source code documentation for OXID eShop EE
+Generate source code documentation for OXID eShop EE
 
 ```
 	

@@ -64,9 +64,8 @@ if [[ ! -e $OUTPUT ]]; then
     mkdir -p $OUTPUT
 fi
 
-SOURCE="doxy.conf.template"
+SOURCE=$(dirname "$0")"/doxy.conf.template"
 DOXCFG="doxy.conf"
-
 
 # Prepare configuration
 cp -f $SOURCE $DOXCFG
@@ -94,7 +93,7 @@ fi
 
 doxygen "$DOXCFG"
 
-DEST=$OUTPUT"html/*"
+DEST=$OUTPUT"/html/*"
 
 mv $DEST $OUTPUT
 
